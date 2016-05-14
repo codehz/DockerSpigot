@@ -1,0 +1,17 @@
+FROM java:8-jre
+
+MAINTAINER Code Hz
+
+ENV MINECRAFT_VERSION 1.8
+
+ENV JAVA_XMX 1G
+ENV JAVA_XMS 1G
+ENV JAVA_PERMSIZE 455m
+
+RUN mkdir -p /app
+
+ADD . /app
+
+RUN build.sh
+
+
